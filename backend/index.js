@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const contacts = require('./src/routes/contacts.routes');
 const { mongoose } = require('./src/database/database.connect');
-
+const path = require('path');
 
 const PORT = process.env.PORT || 5000;
 
@@ -15,8 +15,7 @@ app.use('/api/contacts', contacts);
 
 // Handle production pages
 
-    
-    app.use(express.static(__dirname + '/public/'))
+    app.use(express.static(__dirname + '/public'));
 
     // Handle SPA
    /// app.get(/.*/, (req, res) => {
