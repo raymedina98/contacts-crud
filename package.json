@@ -4,7 +4,7 @@
   "description": "CRUD app for colektia test",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/src/index.js",
+    "start": "node backend/index.js",
     "dev": "nodemon backend/src/index.js"
   },
   "author": "Ray Medina",

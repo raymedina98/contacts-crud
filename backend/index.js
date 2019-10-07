@@ -14,14 +14,7 @@ app.use(express.urlencoded({ extended : false }));
 app.use('/api/contacts', contacts);
 
 // Handle production pages
-
-    app.use(express.static(__dirname + '/public'));
-
-    // Handle SPA
-   /// app.get(/.*/, (req, res) => {
-  //      res.sendFile(__dirname + '/public/index.html')
-  //  });*/
-
+app.use(express.static(__dirname + '/public'));
 
 
 // Handling errors 
