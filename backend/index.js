@@ -4,6 +4,7 @@ const app = express();
 const contacts = require('./src/routes/contacts.routes');
 const { mongoose } = require('./src/database/database.connect');
 
+
 const PORT = process.env.PORT || 5000;
 
 // Middlewares
@@ -18,9 +19,9 @@ app.use('/api/contacts', contacts);
     app.use(express.static(__dirname + '/public/'))
 
     // Handle SPA
-    app.get(/.*/, (req, res) => {
-        res.sendFile(__dirname + '/public/index.html')
-    });
+   /// app.get(/.*/, (req, res) => {
+  //      res.sendFile(__dirname + '/public/index.html')
+  //  });*/
 
 
 
